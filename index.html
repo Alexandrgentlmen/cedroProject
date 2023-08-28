@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Cedro</title>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <section class="modal modal__container">
+  <div class="error-block">
+    <p class="error-block__text">Что-то пошло не так… Попробуйте перегрузить страницу и попробуйте снова</p>
+  </div>
+  <div class="modal__top">
+    <div class="modal__logo-link">
+      <a href="index.html" class="modal__logo">
+        <svg class="modal__logo-svg" xmlns="http://www.w3.org/2000/svg" width="69" height="16" viewBox="0 0 69 16">
+          <path d="M0 13.8496H7.86212V12.078H2.19408V2.15042H0V13.8496Z"/>
+          <path d="M13.523 14C16.9056 14 19.1911 11.9276 19.1911 8.43454V7.56546C19.1911 4.05571 16.9421 2 13.523 2C10.1405 2 7.85498 4.08914 7.85498 7.56546V8.43454C7.85498 11.9443 10.1039 14 13.523 14ZM13.523 12.1281C11.5484 12.1281 10.1588 10.8579 10.1588 8.43454V7.56546C10.1588 5.10864 11.5118 3.87187 13.523 3.87187C15.4794 3.87187 16.8873 5.15877 16.8873 7.56546V8.43454C16.8873 10.8914 15.516 12.1281 13.523 12.1281Z" fill="#2E2E2E"/>
+          <path d="M25.864 9.50418H29.1551C28.9357 11.3928 27.8935 12.1281 26.0469 12.1281C24.1088 12.1281 22.774 10.9248 22.774 8.45125V7.54875C22.774 5.00836 23.9442 3.87187 26.0469 3.87187C27.5461 3.87187 28.4238 4.67409 28.7895 5.74373H31.1664C30.8007 3.67131 28.9723 2 26.0469 2C22.5363 2 20.4702 3.97215 20.4702 7.54875V8.45125C20.4702 12.0446 22.6095 14 26.0469 14C29.2831 14 31.2578 12.195 31.2578 8.66852V7.79944H25.864V9.50418Z" fill="#2E2E2E"/>
+          <path d="M38.2 14C41.5826 14 43.8681 11.9276 43.8681 8.43454V7.56546C43.8681 4.05571 41.6191 2 38.2 2C34.8175 2 32.532 4.08914 32.532 7.56546V8.43454C32.532 11.9443 34.7809 14 38.2 14ZM38.2 12.1281C36.2253 12.1281 34.8358 10.8579 34.8358 8.43454V7.56546C34.8358 5.10864 36.1888 3.87187 38.2 3.87187C40.1564 3.87187 41.5643 5.15877 41.5643 7.56546V8.43454C41.5643 10.8914 40.193 12.1281 38.2 12.1281Z" fill="#2E2E2E"/>
+          <path d="M43.8666 3.92201H47.7977V13.8496H49.9918V3.92201H53.9228V2.15042H43.8666V3.92201Z"/>
+          <path d="M55.2041 13.8496H57.3982V2.15042H55.2041V13.8496Z"/>
+          <path d="M59.6752 13.8496H61.8692V9.87187H64.0633C67.3362 9.87187 69 8.35097 69 6.01114C69 3.52089 67.5007 2.15042 64.0633 2.15042H59.6752V13.8496ZM64.0633 3.92201C65.8734 3.92201 66.6962 4.67409 66.6962 6.01114C66.6962 7.28134 65.8003 8.10028 64.0633 8.10028H61.8692V3.92201H64.0633Z" fill="#2E2E2E"/>
+        </svg>
+      </a>
+    </div>
+    <div class="modal__burger">
+      <button class="modal__burger-btn" aria-expanded="false" aria-label="Закрыть модальное окно" >
+        <svg class="modal__svg">
+          <use xlink:href="img/sprite.svg#cross-modal"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="modal__bottom">
+    <div class="modal__text-wrap ">
+      <h2 class="modal__title block-title">связаться с нами</h2>
+      <p class="modal__text">Закажите обратный звонок, или звоните и пишите нам, чтобы обсудить подробности.</p>
+    </div>
+    <ul class="modal__contacts contacts list-reset">
+      <li class="contacts__item contacts__email email">
+        <h5 class="contacts__title">пишите</h5>
+        <a href="mailto:info@info.com" class="contacts__link">info@info.com</a>
+      </li>
+      <li class="contacts__item contacts__call-us">
+        <h5 class="contacts__title">звоните</h5>
+        <a href="tel:88000000000" class="contacts__link">8(800)000-00-00</a><br>
+      </li>
+    </ul>
+    <div class="modal__call-form">
+      <form action="#" class="form modal__form">
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input input-name" placeholder="ваше имя">
+        </label>
+        <label class="form__label">
+          <input type="tel" name="телефон" class="input-reset form__input input-tel" placeholder="телефон">
+        </label>
+        <!-- <button type="submit" class="btn-reset form__btn btn-white">заказать обратный звонок</button> -->
+
+        <button type="submit" class="btn-reset form__btn btn-white">
+            заказать обратный звонок
+        </button>
+      </form>
+      <small class="modal__small">Нажимая на кнопку «Заказать обратный звонок», вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</small>
+    </div>
+  </div>
+</section>
+
+  <section class="modal-done modal-done__container">
+  <div class="modal-done__top">
+    <div class="modal-done__logo-link">
+      <a href="index.html" class="modal__logo">
+        <svg class="modal__logo-svg" xmlns="http://www.w3.org/2000/svg" width="69" height="16" viewBox="0 0 69 16">
+          <path d="M0 13.8496H7.86212V12.078H2.19408V2.15042H0V13.8496Z"/>
+          <path d="M13.523 14C16.9056 14 19.1911 11.9276 19.1911 8.43454V7.56546C19.1911 4.05571 16.9421 2 13.523 2C10.1405 2 7.85498 4.08914 7.85498 7.56546V8.43454C7.85498 11.9443 10.1039 14 13.523 14ZM13.523 12.1281C11.5484 12.1281 10.1588 10.8579 10.1588 8.43454V7.56546C10.1588 5.10864 11.5118 3.87187 13.523 3.87187C15.4794 3.87187 16.8873 5.15877 16.8873 7.56546V8.43454C16.8873 10.8914 15.516 12.1281 13.523 12.1281Z" fill="#2E2E2E"/>
+          <path d="M25.864 9.50418H29.1551C28.9357 11.3928 27.8935 12.1281 26.0469 12.1281C24.1088 12.1281 22.774 10.9248 22.774 8.45125V7.54875C22.774 5.00836 23.9442 3.87187 26.0469 3.87187C27.5461 3.87187 28.4238 4.67409 28.7895 5.74373H31.1664C30.8007 3.67131 28.9723 2 26.0469 2C22.5363 2 20.4702 3.97215 20.4702 7.54875V8.45125C20.4702 12.0446 22.6095 14 26.0469 14C29.2831 14 31.2578 12.195 31.2578 8.66852V7.79944H25.864V9.50418Z" fill="#2E2E2E"/>
+          <path d="M38.2 14C41.5826 14 43.8681 11.9276 43.8681 8.43454V7.56546C43.8681 4.05571 41.6191 2 38.2 2C34.8175 2 32.532 4.08914 32.532 7.56546V8.43454C32.532 11.9443 34.7809 14 38.2 14ZM38.2 12.1281C36.2253 12.1281 34.8358 10.8579 34.8358 8.43454V7.56546C34.8358 5.10864 36.1888 3.87187 38.2 3.87187C40.1564 3.87187 41.5643 5.15877 41.5643 7.56546V8.43454C41.5643 10.8914 40.193 12.1281 38.2 12.1281Z" fill="#2E2E2E"/>
+          <path d="M43.8666 3.92201H47.7977V13.8496H49.9918V3.92201H53.9228V2.15042H43.8666V3.92201Z"/>
+          <path d="M55.2041 13.8496H57.3982V2.15042H55.2041V13.8496Z"/>
+          <path d="M59.6752 13.8496H61.8692V9.87187H64.0633C67.3362 9.87187 69 8.35097 69 6.01114C69 3.52089 67.5007 2.15042 64.0633 2.15042H59.6752V13.8496ZM64.0633 3.92201C65.8734 3.92201 66.6962 4.67409 66.6962 6.01114C66.6962 7.28134 65.8003 8.10028 64.0633 8.10028H61.8692V3.92201H64.0633Z" fill="#2E2E2E"/>
+        </svg>
+      </a>
+    </div>
+    <div class="moda-done__burger">
+      <button class="modal-done__burger-btn" aria-expanded="false" aria-label="Закрыть модальное окно" >
+        <svg class="modal-done__svg">
+          <use xlink:href="img/sprite.svg#cross-modal"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="modal-done__bottom">
+    <svg class="modal-done__phone-svg">
+      <use xlink:href="img/sprite.svg#phone"></use>
+    </svg>
+    <div class="modal-done__text-wrap">
+      <h2 class="modal-done__title block-title">Звонок успешно заказан!</h2>
+      <p class="modal-done__text">В ближайшее время наш менеджер свяжется с вами.</p>
+    </div>
+    <button class="modal-done__btn btn-reset btn-white">вернуться на главную</button>
+  </div>
+</section>
+
+    <div class="header__controls  header__container">
+      <div class="header__logo-link">
+        <a href="index.html" class="header__logo">
+          <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" width="69" height="16" viewBox="0 0 69 16">
+            <path d="M0 13.8496H7.86212V12.078H2.19408V2.15042H0V13.8496Z"/>
+            <path d="M13.523 14C16.9056 14 19.1911 11.9276 19.1911 8.43454V7.56546C19.1911 4.05571 16.9421 2 13.523 2C10.1405 2 7.85498 4.08914 7.85498 7.56546V8.43454C7.85498 11.9443 10.1039 14 13.523 14ZM13.523 12.1281C11.5484 12.1281 10.1588 10.8579 10.1588 8.43454V7.56546C10.1588 5.10864 11.5118 3.87187 13.523 3.87187C15.4794 3.87187 16.8873 5.15877 16.8873 7.56546V8.43454C16.8873 10.8914 15.516 12.1281 13.523 12.1281Z" fill="#2E2E2E"/>
+            <path d="M25.864 9.50418H29.1551C28.9357 11.3928 27.8935 12.1281 26.0469 12.1281C24.1088 12.1281 22.774 10.9248 22.774 8.45125V7.54875C22.774 5.00836 23.9442 3.87187 26.0469 3.87187C27.5461 3.87187 28.4238 4.67409 28.7895 5.74373H31.1664C30.8007 3.67131 28.9723 2 26.0469 2C22.5363 2 20.4702 3.97215 20.4702 7.54875V8.45125C20.4702 12.0446 22.6095 14 26.0469 14C29.2831 14 31.2578 12.195 31.2578 8.66852V7.79944H25.864V9.50418Z" fill="#2E2E2E"/>
+            <path d="M38.2 14C41.5826 14 43.8681 11.9276 43.8681 8.43454V7.56546C43.8681 4.05571 41.6191 2 38.2 2C34.8175 2 32.532 4.08914 32.532 7.56546V8.43454C32.532 11.9443 34.7809 14 38.2 14ZM38.2 12.1281C36.2253 12.1281 34.8358 10.8579 34.8358 8.43454V7.56546C34.8358 5.10864 36.1888 3.87187 38.2 3.87187C40.1564 3.87187 41.5643 5.15877 41.5643 7.56546V8.43454C41.5643 10.8914 40.193 12.1281 38.2 12.1281Z" fill="#2E2E2E"/>
+            <path d="M43.8666 3.92201H47.7977V13.8496H49.9918V3.92201H53.9228V2.15042H43.8666V3.92201Z"/>
+            <path d="M55.2041 13.8496H57.3982V2.15042H55.2041V13.8496Z"/>
+            <path d="M59.6752 13.8496H61.8692V9.87187H64.0633C67.3362 9.87187 69 8.35097 69 6.01114C69 3.52089 67.5007 2.15042 64.0633 2.15042H59.6752V13.8496ZM64.0633 3.92201C65.8734 3.92201 66.6962 4.67409 66.6962 6.01114C66.6962 7.28134 65.8003 8.10028 64.0633 8.10028H61.8692V3.92201H64.0633Z" fill="#2E2E2E"/>
+          </svg>
+        </a>
+      </div>
+      <div class="header__wrapper">
+        <nav class="header__nav nav" data-menu>
+          <ul class="nav__list list-reset accordion__list">
+            <li class="nav__item accordion">
+              <button class="nav__btn btn-reset accordion__control" aria-expanded="false">Управление недвижимостью</button>
+              <div class="dropdown accordion__content" aria-hidden="true">
+                <ul class="dropdown__list list-reset">
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Технический аудит недвижимости</a>
+                  </li>
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Эксплуатация и техническое обслуживание недвижимости</a>
+                  </li>
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Пожарная безопасность</a>
+                  </li>
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Клининг</a>
+                  </li>
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Управление арендными отношениями</a>
+                  </li>
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Аварийно-диспетчерская служба</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item" data-menu-item>
+              <button class="nav__btn btn-reset">Продажа и аренда</button>
+            </li>
+            <li class="nav__item accordion">
+              <button  class="nav__btn btn-reset accordion__control" aria-expanded="false">Консалтинг</button>
+              <div class="dropdown accordion__content" aria-hidden="true">
+                <ul class="dropdown__list list-reset">
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Бухгалтерские и кадровые услуги</a>
+                  </li>
+                  <li class="dropdown__item" data-menu-item>
+                    <a href="#" class="dropdown__link">Юридическое сопровождение</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <button class="nav__item_btn btn-reset btn-white">
+            Связаться с нами
+          </button>
+        </nav>
+        <button class="header__btn-call btn-reset btn-white">
+          Связаться с нами
+        </button>
+      </div>
+      <div class="header__burger">
+        <button class="burger" data-burger aria-expanded="false" aria-label="Открыть меню" >
+          <span class="burger__line"></span>
+        </button>
+        <span class="header__burger-text">Меню</span>
+      </div>
+    </div>
+    <div class="header__text">
+      <h1 class="header__title">Управляющая компания и брокер с базой недвижимости<br/> в 7 городах России</h1>
+      <p class="header__text_under">Снимаем с владельцев зданий все задачи по администрированию и подбираем недвижимость для инвестиций, покупки и аренды. </p>
+    </div>
+    <img class="header__img rellax" src="./img/city-view.jpg" alt="город" data-rellax-speed="-8">
+</header>
+
+      <main class="main">
+        <section class="admin">
+  <div class="container admin__container">
+    <h2 class="admin__title block-title">Под нашим управлением</h2>
+    <ul class="admin__lands list-reset">
+      <li class="lands">
+        <p class="lands__value">300 Га</p>
+        <p class="lands__word">земли</p>
+      </li>
+      <li class="lands">
+        <p class="lands__value">4 000 000 M<sup>2</sup></p>
+        <p class="lands__word">жилой и коммерческой недвижимости</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+        <section class="partnership">
+  <div class="container">
+    <h2 class="partnership__title block-title">С кем мы сотрудничаем</h2>
+    <ul class="partnership__testimonials testimonials list-reset">
+      <li class="testimonials__item">
+        <article class="testimonials__card">
+          <div class="testimonials__icon">
+            <svg class="testimonials__img" width="158" height="266" viewBox="0 0 158 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="testimonials__svg-path" d="M79 240.627V265L157 220.245V195.885L79 240.627Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M1 195.885V220.245L78.9997 265V240.627L1 195.885Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M79.0007 118.048L138.915 83.6719L138.967 196.713L78.9746 230.26L79.0007 118.048Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M78.9745 117.996L19.0861 83.6719L18.9688 195.08L78.9745 230.26V117.996Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M121.339 62.4482L79.1055 86.6917V107.89L121.378 83.6338L121.339 62.4482Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M36.6612 62.4482L79.0251 86.6917V107.89L36.6221 83.6338L36.6612 62.4482Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M56.5088 8.75065L56.926 8.50611C56.926 8.50611 65.6492 3.56376 67.2921 2.61133C71.7645 0.0243265 77.6712 0.564895 83.956 4.14295C96.643 11.3763 106.97 29.0348 106.97 43.5015C106.97 50.5804 104.972 56.1765 100.539 58.7249C96.4057 61.106 89.901 64.6645 89.901 64.6645"  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M83.562 66.3471C80.3544 66.3471 76.8078 65.2846 73.1438 63.1855C60.4568 55.9034 50.1299 38.1257 50.1299 23.5614C50.1299 16.3959 52.5812 11.0445 57.0406 8.49185C61.4999 5.93922 67.3936 6.4964 73.6263 10.0727C86.3133 17.3548 96.6402 35.1325 96.6402 49.6967C96.6402 56.8622 94.1889 62.2137 89.7295 64.7663C87.891 65.8288 85.8178 66.3471 83.562 66.3471Z"  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M19.0861 83.6719L18.9688 195.08L27.3659 200.004V88.4143L19.0861 83.6719Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M27.4966 88.4688L27.3662 199.97L35.7764 204.897V93.2275L27.4966 88.4688Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M35.9181 93.3105L35.8008 204.88L44.1979 209.811V98.0598L35.9181 93.3105Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M44.3306 98.1504L44.2002 209.882L52.6104 214.819V102.919L44.3306 98.1504Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M52.7267 102.934L52.6094 214.719L61.0065 219.66V107.692L52.7267 102.934Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M60.8244 107.658L60.707 219.532L69.1042 224.476V112.433L60.8244 107.658Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M79.0007 118.046L88.2845 112.721V224.829L78.9746 230.258L79.0007 118.046Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M79 118.014L88.2838 112.721V225.029L79.1043 230.258L79 118.014Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M88.2861 112.751L97.5699 107.474V219.699L88.3774 224.937L88.2861 112.751Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M97.5654 107.378L106.836 102.08V214.449L97.6567 219.682L97.5654 107.378Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M106.84 102.054L116.124 96.752V209.261L106.944 214.512L106.84 102.054Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M116.123 96.712L125.407 91.4062V204.134L116.214 209.388L116.123 96.712Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M125.407 91.445L134.691 86.127V199.031L125.498 204.284L125.407 91.445Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M71.0058 50.5785C68.3067 48.9459 65.8684 46.9893 63.3258 44.4626C62.8303 43.9702 62.5044 43.2446 62.4913 42.6356L62.4131 38.1652C62.4 37.1416 63.2997 36.9213 64.1342 37.7765C65.2295 38.8909 66.377 39.9793 67.5766 41.0418C69.4411 42.6874 71.0841 43.8925 72.4923 44.6699C73.6528 45.3048 74.5003 45.6158 75.0349 45.6028C75.5695 45.5769 75.8303 45.2012 75.8172 44.4496C75.8042 43.9313 75.6086 43.4001 75.2174 42.817C74.8263 42.2469 74.1613 41.4824 73.2485 40.5365C72.3358 39.5906 71.0971 38.3596 69.5455 36.8695C67.7982 35.185 66.39 33.5912 65.3078 32.0882C64.2255 30.5851 63.4301 29.1468 62.9347 27.7474C62.4261 26.348 62.1653 24.819 62.1393 23.1475C62.1001 20.5819 62.7912 18.9881 64.2125 18.3403C65.6337 17.6924 67.4722 17.8608 70.3669 19.1307L70.3278 16.4225C70.3017 15.0879 71.5404 14.6215 72.7139 15.2693C73.8875 15.9172 75.1783 17.7831 75.2044 19.1177L75.2566 21.774C77.5775 23.1993 79.5855 24.8579 81.9456 27.1514C82.6236 27.8122 82.9496 28.8747 82.6888 29.4708L81.3067 32.6065C81.0459 33.2025 80.3027 33.0989 79.6377 32.451C77.2385 30.0538 75.0479 28.3175 73.079 27.2161C71.9838 26.6071 71.2145 26.335 70.7842 26.3998C70.3408 26.4517 70.1322 26.7756 70.1452 27.3716C70.1583 27.8899 70.3148 28.3953 70.6538 28.9006C70.9797 29.406 71.5404 30.0927 72.3358 30.935C73.1312 31.7901 74.2395 32.8656 75.6608 34.1873C78.5294 36.9084 80.6026 39.3573 81.8674 41.5083C83.1322 43.6592 83.7841 45.9009 83.8232 48.2073C83.8623 50.8118 83.1713 52.5351 81.75 53.3644C80.3288 54.1937 78.399 54.103 75.6086 52.9498L75.6738 56.7981C75.6999 58.1328 74.5916 58.5863 73.4181 57.9384C72.2445 57.2905 71.0841 55.632 71.071 54.2973L71.0058 50.5785Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M36.1152 62.8633V73.9021L19.0862 83.6721L18.2908 185.959L1.00098 195.884V220.244L79.0006 264.999L157 220.244V195.884L139.763 186.347L138.915 83.6721L121.873 73.5782L121.743 63.6009L121.325 62.4607L105.6 53.4422C106.813 50.8637 106.969 47.43 106.969 43.8019C106.969 29.2376 96.6425 11.4599 83.9555 4.17782C77.6706 0.575632 71.764 0.0314168 67.2916 2.63588C65.766 3.52994 58.1251 7.89662 57.0559 8.50562H57.0429C57.0429 8.50562 57.0298 8.50562 57.0298 8.51858C56.9646 8.55745 56.9255 8.58337 56.9255 8.58337L56.5083 8.82956L56.5343 8.86843C52.414 11.5377 50.1322 16.7207 50.1322 23.5882C50.1322 32.0883 53.4464 41.4472 58.8837 49.4161L36.1152 62.8633Z"  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="testimonials__content">
+            <h3 class="testimonials__title">С арендодателями</h3>
+            <p class="testimonials__text">
+              Берём на себя все заботы по управлению помещениями: ищем арендаторов, решаем юридические вопросы, готовим налоговые отчёты и нанимаем персонал.
+            </p>
+            <button class="btn-reset testimonials__btn">подробнее</button>
+          </div>
+        </article>
+      </li>
+      <li class="testimonials__item">
+        <article class="testimonials__card">
+          <div class="testimonials__icon">
+            <svg class="testimonials__img" width="233" height="266" viewBox="0 0 233 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="testimonials__svg-path" d="M201.362 182.569L231.949 167.223V181.111L201.888 196.782" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M209.938 178.233L231.948 167.219V139.469L209.938 150.469V178.233Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M201.363 182.57L209.94 178.278V150.527L201.363 154.806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M209.427 142.647L231.949 131.687V103.613L209.427 114.883V142.647Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M201.363 146.705L209.428 142.683V114.919L201.363 118.955" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M208.762 106.715L231.944 95.1213V67.3711L208.762 78.9652V106.715Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M201.359 110.467L208.763 106.769V79.0049L201.359 82.7031"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M136.238 205.176L113.716 216.338"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M46.2047 255.252L1.08008 232.672L0.999023 108.5L46.2047 132.171V255.252Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M113.715 159.166L131.26 150.379V121.198L113.715 129.985"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M118.962 127.365V156.533"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M156.44 215.502L136.076 205.311L136.238 79.1123L156.44 87.2781V215.502Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M156.44 224.5V215.503L136.076 205.312V214.491L156.44 224.5Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M201.361 193.259L156.264 215.394V87.1706L201.361 65.0352V193.259Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M68.5776 132.696L46.2041 132.17V255.237L68.5776 255.885V132.696Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M1.07812 241.524L46.1892 264.604V255.237L1.07812 232.777V241.524Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M68.5774 265.305L46.1904 264.603V255.236L68.5774 255.938V265.305Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M113.715 203.717L131.692 194.715V167.221L113.715 176.223"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M119.702 200.518L120.484 200.127V173.321"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M32.499 93.9995L0.999023 108.5L45.9351 132.17L68.3086 132.696L113.42 109.265L93.8109 100.276L135.969 79.1125L156.171 87.2783L231.68 49.6077L168.2 27.7422L72.7324 74.4995"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M113.689 233L68.5781 255.783L68.5781 132.697L113.689 109.266V233Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M113.689 242.605L68.5781 265.307V255.94L113.689 233.021V242.605Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M201.362 193.259V201.6L156.5 224.499L156.453 215.057"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M68.5781 140.39L113.689 117.769"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M190.695 113.705V86.4268L167.701 97.9399V125.218L190.695 113.705Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M191.465 152.495V125.217L168.471 136.73V164.008L191.465 152.495Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M191.465 190.504V163.227L168.471 174.74V202.018L191.465 190.504Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M178.867 92.3525V119.63"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M179.973 130.967V158.245"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M179.973 168.909V196.187"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M103.34 154.781V127.503L80.3457 139.016V166.294L103.34 154.781Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M104.123 193.571V166.293L81.1289 177.806V205.084L104.123 193.571Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M104.123 231.59V204.312L81.1289 215.826V243.09L104.123 231.59Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M91.5166 133.426V160.704"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M92.6221 172.054V199.318"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M92.6221 209.996V237.274"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M136.075 214.491L113.688 226V216.299L136.075 205.312V214.491Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M231.949 49.6074V175.226"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M7.74219 161.31V134.896L39.5425 150.809V177.034"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M7.79492 161.31L39.4738 177.034"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M21.2158 141.644V167.963"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M39.5425 202.95V231.712L7.74219 215.799V187.226"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M7.79492 187.226L39.4738 202.95"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M21.2158 193.893V222.102"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M41.9151 96.5667L40.1754 96.1483L24.5854 91.3433C20.3507 89.8856 17.2894 85.8904 15.9273 80.0731L10.8835 58.5721C8.1458 46.897 13.0143 30.7273 21.7533 22.5211L37.8423 7.40419C42.3331 3.19306 47.2151 1.5734 51.5576 2.86913L68.1726 7.98457"  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M43.8288 96.7954C42.7904 96.7954 41.7654 96.647 40.7674 96.35C36.3979 95.0273 33.2152 90.9916 31.7992 84.9584L26.7554 63.4574C24.0177 51.7823 28.8997 35.6126 37.6252 27.4063L53.7141 12.2895C58.2185 8.05135 63.1005 6.44518 67.4835 7.76791C71.853 9.09063 75.0357 13.1263 76.4517 19.1595L81.4956 40.6606C84.2332 52.2952 79.3782 68.4243 70.6932 76.6441C70.8955 80.3424 72.2171 82.7449 73.323 84.1486C73.8894 84.8639 74.1186 85.8762 73.9298 86.983C73.7275 88.2517 73.0667 89.3585 72.1631 89.9524C69.5738 91.6665 67.0519 92.1524 64.6649 91.3966C62.2239 90.6137 60.5516 88.6701 59.5401 87.1179L54.5368 91.8285C51.0574 95.0948 47.3487 96.7954 43.8288 96.7954Z"  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M50.6152 74.4838C50.4803 74.4838 50.332 74.4703 50.1971 74.4433C49.0912 74.2273 48.3495 73.242 48.2146 71.7978L47.338 62.5253C47.2841 62.0124 47.1223 61.8099 47.0818 61.7829L41.2153 60.1497C40.4331 59.9338 39.8398 59.3129 39.57 58.3951C39.0845 56.8159 39.57 54.6699 40.7164 53.2797L46.6503 46.2341C47.0818 45.7212 47.392 44.9384 47.4729 44.1826L48.4844 34.0462C48.6867 32.0351 49.8734 30.2265 51.303 29.7406C52.1661 29.4571 53.0157 29.6596 53.6361 30.3344L58.1809 35.2474C58.2213 35.2744 58.3158 35.2474 58.4641 35.1529L64.9644 30.5234C65.8815 29.862 66.9199 29.8215 67.7156 30.4019C68.8349 31.2117 69.1991 33.0339 68.6057 34.9505L65.4904 45.0329C65.2746 45.7482 65.2476 46.5041 65.4364 46.963L68.4438 54.238C68.9563 55.4932 68.7945 57.2478 67.9988 58.719C67.3919 59.8528 66.5423 60.5817 65.6117 60.7841L59.1384 62.1068C58.9496 62.1473 58.5315 62.4578 58.1809 63.1461L53.5417 72.2702C52.7999 73.6604 51.721 74.4838 50.6152 74.4838Z"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M156.5 224L136 214.5L114.5 225.5L114 242.5L68.5 265L46.5 264.5L1 241.5L1.08105 108.632L32 94L24 91.5C19.7654 90.0423 17.2914 85.4433 15.9293 79.626L10.8855 58.1385C8.14779 46.4634 13.0163 30.2938 21.7553 22.0875L37.8442 6.97059C42.3351 2.75947 47.2171 1.1398 51.5596 2.43553C52.9833 2.87377 68.2083 7.30773 68.1341 7.60496C72.1529 9.13015 75.0929 13.0308 76.428 18.7267L81.4719 40.2277C83.9263 50.688 82.0787 63.8613 74.9985 72.5805L168 28L231.5 49.5V181.122L202 197L201.5 201.5L156.5 224Z"  stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </div>
+          <div class="testimonials__content">
+            <h3 class="testimonials__title">С инвесторами и бизнесом</h3>
+            <p class="testimonials__text">Подбираем помещения под любую задачу. Бизнесу — под офисы и склады. Инвесторам — коммерческую недвижимость, которую можно будет сдавать в аренду.</p>
+            <button class="btn-reset testimonials__btn">подробнее</button>
+          </div>
+        </article>
+      </li>
+      <li class="testimonials__item">
+        <article class="testimonials__card">
+          <div class="testimonials__icon">
+            <svg class="testimonials__img" width="290" height="266" fill="none" viewBox="0 0 290 266" xmlns="http://www.w3.org/2000/svg">
+              <path class="testimonials__svg-path" d="M1.00002 177.231L1.01514 182.685L144.199 265.001L144.184 259.547L1.00002 177.231Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M40.0736 154.896L1.00017 177.232L144.199 259.308L289 177.278L243.128 150.992" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M40.2936 159.674L19.3995 171.63L54.9759 191.556L144.852 140.799L228.341 188.14L263.917 168.214L243.143 155.968" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M144.184 259.547L144.199 265.001L288.778 182.777L288.763 177.323L144.184 259.547Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M144.7 97.911V105.586L228.023 153.568L227.993 145.089L144.7 97.911Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M269.95 129.71L269.92 121.231L227.994 145.089L228.024 153.568L269.95 129.71Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M54.8615 148.501L54.8917 156.98L144.701 105.586V97.911L54.8615 148.501Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M13.2073 124.645L13.2375 133.123L54.8916 156.981L54.8614 148.502L13.2073 124.645Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M69.921 92.3677L13.208 124.644L54.862 148.501L144.702 97.911L227.995 145.089L269.921 121.232L180.595 70.0752" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M40.062 148.444L40.0922 159.411L75.873 179.599L75.6985 145.136" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M75.6991 145.136L75.8735 179.6L144.768 140.885" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M144.767 106.154V140.884L207.449 176.183L207.116 141.706" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M207.117 141.707L207.45 176.183L243.146 155.968L243.116 144.985" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M200.75 160.441V143.632L169.09 125.616V142.425L200.75 160.441Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M192.373 155.659V139.065L192.267 139.005L177.465 130.442V147.037L177.571 147.097L192.373 155.659Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M84.377 163.151L116.037 145.135V128.326L84.377 146.342V163.151Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M84.607 149.889L115.844 132.112V128.685L84.6221 146.447V149.889H84.607Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M124.836 141.705L138.655 133.837V117.028L124.836 124.896V141.705Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M70.0256 82.0043V92.2338L105.22 112.462L105.632 78.1826" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M105.234 78.2588V112.458L180.594 70.0711L180.34 35.5586L105.234 78.2588Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M84.2495 83.1426L84.2646 89.9227L186.445 31.9442L186.43 25.1641L84.2495 83.1426Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M42.5799 59.2744L42.595 66.0546L84.249 89.9117L84.2339 83.1316L42.5799 59.2744Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M42.5944 59.5377L84.2485 83.3949L186.624 25.175L145.308 1.00195L42.5944 59.5377Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M110.337 100.327L141.997 82.3107V65.502L110.337 83.5178V100.327Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M118.711 95.3392L133.619 87.0471V70.2881L118.711 78.8281V95.3392Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M155.768 76.4968L169.587 68.6289V51.835L155.768 59.7029V76.4968Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M248.799 200.151V205.515L284.738 185.175V179.6L248.799 200.151Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M228.34 188.141L248.799 200.151L284.811 179.601L263.916 168.214L228.34 188.141Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M40.2939 200.097V205.297L4.54433 184.625V179.501L40.2939 200.097Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M54.9766 191.557L40.4673 200.033L4.71776 179.601L19.4001 171.63L54.9766 191.557Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M155.297 234.232C167.484 233.01 179.156 229.732 188.56 224.382C212.917 210.524 212.917 188.068 188.56 174.209C174.514 166.222 155.448 162.84 137.154 164.062" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M119.269 166.819C112.42 168.548 105.994 171.007 100.37 174.196C76.0123 188.054 76.0123 210.51 100.37 224.369C110.575 230.18 123.457 233.548 136.747 234.487" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M139.678 170.172L137.183 164.256L134.688 158.34L126.932 162.512L119.176 166.7L129.427 168.443L139.678 170.172Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M136.76 234.636L137.274 240.716L146.271 237.438L155.267 234.144L145.756 231.358L136.261 228.571L136.76 234.636Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M119.706 212.818C120.053 211.909 119.948 210.523 119.675 209.689C118.678 208.631 116.092 208.288 111.647 208.527C106.461 208.81 104.753 207.692 103.724 204.995C102.711 202.328 102.681 200.674 108.064 199.571C113.673 198.423 115.457 196.963 113.522 194.981C113.28 194.758 113.038 194.549 112.766 194.326C112.705 194.281 112.66 194.251 112.6 194.206H112.615C112.055 193.744 111.435 193.312 110.77 192.895C109.198 191.912 106.204 190.541 106.597 189.84C107.172 188.812 108.034 187.784 109.077 186.83C110.075 185.906 111.33 184.982 112.69 184.222C113.628 183.701 117.105 184.625 119.343 184.982C120.295 185.131 121.263 185.251 122.231 185.34H122.216C122.306 185.355 122.397 185.355 122.488 185.37C122.941 185.4 123.395 185.429 123.848 185.459C127.825 185.564 129.337 183.999 128.641 180.631C127.976 177.398 130.577 176.682 135.233 175.997C139.951 175.311 142.46 175.684 144.32 178.456C145.908 180.825 147.601 181.987 149.718 182.032C151.139 181.808 153.362 181.242 154.647 180.646C157.867 179.186 159.5 176.131 165.442 178.619C171.399 181.108 171.686 180.884 168.874 185.832C167.604 188.067 170.22 190.198 174.347 190.243C175.391 190.257 176.464 190.302 177.447 190.153C183.464 189.304 184.009 191.643 185.233 194.057C186.549 196.665 185.475 197.961 180.985 198.975C173.153 200.718 172.442 203.028 179.17 206.113C183.812 208.229 181.665 209.823 179.79 211.73C177.568 213.593 176.071 215.337 170.673 213.921C162.841 211.865 159.515 213.265 160.256 218.034C160.679 220.761 159.122 221.908 154.435 222.4C150.096 222.862 146.165 223.622 144.819 220.179C144.592 219.613 144.048 219.077 143.564 218.555C141.644 216.484 137.123 216.097 134.175 217.736C127.659 221.387 127.87 221.133 121.293 219.211C114.777 217.304 118.844 215.098 119.706 212.818Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M144.457 213.132C131.021 213.132 120.13 206.934 120.13 199.289C120.13 191.643 131.021 185.445 144.457 185.445C157.893 185.445 168.784 191.643 168.784 199.289C168.784 206.934 157.893 213.132 144.457 213.132Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M144.698 203.119C141.133 203.119 138.242 201.471 138.242 199.438C138.242 197.406 141.133 195.758 144.698 195.758C148.264 195.758 151.154 197.406 151.154 199.438C151.154 201.471 148.264 203.119 144.698 203.119Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="testimonials__svg-path" d="M13.1874 124.943L69.625 92.2347V82.5734L42.625 66.0925V59.8411L144.764 1.39746L186.113 25.1236V32.9527L180.437 35.9721V70.0706L270.128 120.958V130.067L244.152 145.44V151.133L288.764 176.753V182.446L144.199 265L0.999876 182.923V177.23L39.1638 155.118V148.856L13.1874 132.914V124.943Z" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </div>
+          <div class="testimonials__content">
+            <h3 class="testimonials__title">С другими управляющими компаниями</h3>
+            <p class="testimonials__text">Предоставляем услуги своей аварийно-диспетчерской службы: устраняем поломки и следим за исправностью всех внутридомовых систем.</p>
+            <button class="btn-reset testimonials__btn">подробнее</button>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+        <section class="main-gallery">
+    <h2 class="main-gallery__title block-title">Нас выбирают потому что мы автоматизируем все
+       процессы и предлогаем комплексные решения
+    </h2>
+    <div class="main-gallery__wrapper gallery-scroll">
+      <section class="gallery-scroll__charges panel">
+
+        <div class="wrap-container">
+          <div class="gallery-scroll__descr">
+            <div class="gallery-scroll__descr_top">
+              <p class="gallery-scroll__count">01</p>
+            </div>
+            <div class="gallery-scroll__descr_bottom">
+              <h3 class="gallery-scroll__title paragraph-title ">Клиенты «Предприятия» следят за расходами онлайн</h3>
+              <p class="gallery-scroll__text">
+                Для этого у нас есть программа Oddin. Там мы публикуем отчёты о проделанной работе, например если заменили лампочку или устранили аварию. Всё с фото, датами и чеками.
+              </p>
+            </div>
+          </div>
+          <div class="gallery-scroll__image">
+            <img src="./img/charges.jpg" alt="фото работника" class="gallery-scroll__img">
+          </div>
+        </div>
+      </section>
+      <section class="gallery-scroll__control panel">
+
+        <div class="wrap-container">
+          <div class="gallery-scroll__descr">
+            <div class="gallery-scroll__descr_top">
+              <p class="gallery-scroll__count">02</p>
+            </div>
+            <div class="gallery-scroll__descr_bottom">
+              <h3 class="gallery-scroll__title paragraph-title ">Налаживаем управление зданием с нуля</h3>
+              <p class="gallery-scroll__text">
+                Оснащаем техникой, например системой дымоудаления или сигнализацией. Нанимаем персонал в охрану, клининг и администрацию.
+              </p>
+            </div>
+          </div>
+          <div class="gallery-scroll__image">
+            <img src="./img/control-view.jpg" alt="" class="gallery-scroll__img">
+          </div>
+        </div>
+
+      </section>
+      <section class="gallery-scroll__experts panel">
+
+        <div class="wrap-container">
+          <div class="gallery-scroll__descr">
+            <div class="gallery-scroll__descr_top">
+              <p class="gallery-scroll__count">03</p>
+              <div class="slider-experts__nav">
+                <button class="slider-experts__prev slider-experts__btn btn-reset">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#left-arrow"></use>
+                    </svg>
+                </button>
+                <button class="slider-experts__next slider-experts__btn btn-reset">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#right-arrow"></use>
+                  </svg>
+                </button>
+                <div class="swiper-pagination slider-experts__pagination"></div>
+              </div>
+            </div>
+            <div class="gallery-scroll__descr_bottom">
+              <h3 class="gallery-scroll__title paragraph-title">Наша команда — эксперты в управлении недвижимостью</h3>
+              <p class="gallery-scroll__text">
+                Они знают, как организовать процессы, чтобы доход клиента был максимальным, а участие в администрировании — минимальным.
+              </p>
+            </div>
+          </div>
+          <div class="gallery-scroll__image swiper slider-experts">
+            <div class="slider-experts__cards swiper-wrapper">
+              <div class="slider-experts__expert expert swiper-slide">
+                <img src="./img/expert-person.jpg" alt="наш эксперт первый" class="expert__picture">
+                <div class="expert__about">
+                  <p class="expert__position">генеральный директор</p>
+                  <h5 class="expert__name">Фамилия Имя<br/>Отчество</h5>
+                  <p class="expert__experience">
+                    Опыт работы в сфере недвижимости, в том числе международной с 2000 года
+                  </p>
+                  <ul class="expert__contact list-reset">
+                    <li class="expert__item">
+                      <a href="tel:89270000000" class="expert__number">+7 927 000-00-00</a>
+                    </li>
+                    <li class="expert__item">
+                      <a href="mailto:example@info.com" class="expert__mail">example@info.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slider-experts__expert expert swiper-slide">
+                <img src="./img/expert-person.jpg" alt="наш эксперт первый" class="expert__picture">
+                <div class="expert__about">
+                  <p class="expert__position">генеральный директор</p>
+                  <h5 class="expert__name">Фамилия Имя<br/>Отчество</h5>
+                  <p class="expert__experience">
+                    Опыт работы в сфере недвижимости, в том числе международной с 2000 года
+                  </p>
+                  <ul class="expert__contact list-reset">
+                    <li class="expert__item">
+                      <a href="tel:89270000000" class="expert__number">+7 927 000-00-00</a>
+                    </li>
+                    <li class="expert__item">
+                      <a href="mailto:example@info.com" class="expert__mail">example@info.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slider-experts__expert expert swiper-slide">
+                <img src="./img/expert-person.jpg" alt="наш эксперт первый" class="expert__picture">
+                <div class="expert__about">
+                  <p class="expert__position">генеральный директор</p>
+                  <h5 class="expert__name">Фамилия Имя<br/>Отчество</h5>
+                  <p class="expert__experience">
+                    Опыт работы в сфере недвижимости, в том числе международной с 2000 года
+                  </p>
+                  <ul class="expert__contact list-reset">
+                    <li class="expert__item">
+                      <a href="tel:89270000000" class="expert__number">+7 927 000-00-00</a>
+                    </li>
+                    <li class="expert__item">
+                      <a href="mailto:example@info.com" class="expert__mail">example@info.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+</section>
+
+        <section class="news">
+  <div class="container">
+    <div class="news__block">
+      <h2 class="news__title block-title">Наши новости</h2>
+      <div class="news__nav">
+        <button class="news__btn news__btn-prev btn-reset">
+          <svg>
+            <use xlink:href="img/sprite.svg#left-arrow"></use>
+          </svg>
+        </button>
+        <button class="news__btn news__btn-next btn-reset">
+          <svg>
+            <use xlink:href="img/sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="swiper news__slider">
+        <div class="news__wrapper swiper-wrapper">
+          <div class="swiper-slide news__slide news-info">
+            <div class="news__slide__news-text">
+              <p class="news-info__date news-info__date_slide">02/03/22</p>
+              <h5 class="news-info__title news-info__title_slide">Заголовок новости</h5>
+              <p class="news-info__text news-info__text_slide">
+                Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.
+              </p>
+            </div>
+            <img class="news__img" src="./img/front-house.jpg" alt="дом">
+          </div>
+          <div class="swiper-slide news__slide news-info">
+            <div class="news__slide__news-text">
+              <p class="news-info__date news-info__date_slide">22/02/22</p>
+              <h5 class="news-info__title news-info__title_slide">Заголовок новости</h5>
+              <p class="news-info__text news-info__text_slide">
+                Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.
+              </p>
+            </div>
+            <img class="news__img" src="./img/store.jpg" alt="склад">
+          </div>
+          <ul class="swiper-slide news__slide news__wrapper_flex list-reset">
+            <li class="news__card news-info">
+              <span class="news-info__date">13/02/22</span>
+              <h5 class="news-info__title">Длинный заголовок новости в две строки </h5>
+              <p class="news-info__text">
+                Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.
+              </p>
+            </li>
+            <li class="news__card news-info">
+              <span class="news-info__date">01/02/22</span>
+              <h5 class="news-info__title">Заголовок новости</h5>
+              <p class="news-info__text">
+                Также как реализация намеченных плановых заданий предполагает независимые способы реализации плановых заданий предполагает независимые дальнейших действий.
+              </p>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <a href="#" class="news__link btn-white">все новости</a>
+  </div>
+  </div>
+</section>
+
+      </main>
+      <button class="mouse btn-reset" tabindex="-1" aria-hidden="true">
+  <div class="mouse-view">заказать обратный звонок</div>
+</button>
+
+      <footer class="footer">
+    <div class="ticker">
+      <div class="ticker__string ticker__string_top">
+        <button class="ticker__string_stroke">Закажите обратный звонок, чтобы обсудить подробности</button>
+        <button class="ticker__string_fill">Закажите обратный звонок, чтобы обсудить подробности</button>
+        <button class="ticker__string_stroke">Закажите обратный звонок, чтобы обсудить подробности</button>
+      </div>
+      <div class="ticker__string ticker__string_mid">
+        <button class="ticker__string_stroke">Закажите обратный звонок, чтобы обсудить подробности</button>
+        <button class="ticker__string_fill">Закажите обратный звонок, чтобы обсудить подробности</button>
+        <button class="ticker__string_stroke">Закажите обратный звонок, чтобы обсудить подробности</button>
+      </div>
+      <div class="ticker__string ticker__string_bot">
+        <button class="ticker__string_stroke">Закажите обратный звонок, чтобы обсудить подробности</button>
+        <button class="ticker__string_fill">Закажите обратный звонок, чтобы обсудить подробности</button>
+        <button class="ticker__string_stroke">Закажите обратный звонок, чтобы обсудить подробности</button>
+      </div>
+    </div>
+    <div class="footer__nav">
+      <div class="footer__logo-link">
+        <a href="index.html" class="footer__logo">
+          <svg class="footer__logo-svg" xmlns="http://www.w3.org/2000/svg" width="69" height="16" viewBox="0 0 69 16">
+            <path d="M0 13.8496H7.86212V12.078H2.19408V2.15042H0V13.8496Z"/>
+            <path d="M13.523 14C16.9056 14 19.1911 11.9276 19.1911 8.43454V7.56546C19.1911 4.05571 16.9421 2 13.523 2C10.1405 2 7.85498 4.08914 7.85498 7.56546V8.43454C7.85498 11.9443 10.1039 14 13.523 14ZM13.523 12.1281C11.5484 12.1281 10.1588 10.8579 10.1588 8.43454V7.56546C10.1588 5.10864 11.5118 3.87187 13.523 3.87187C15.4794 3.87187 16.8873 5.15877 16.8873 7.56546V8.43454C16.8873 10.8914 15.516 12.1281 13.523 12.1281Z" fill="#2E2E2E"/>
+            <path d="M25.864 9.50418H29.1551C28.9357 11.3928 27.8935 12.1281 26.0469 12.1281C24.1088 12.1281 22.774 10.9248 22.774 8.45125V7.54875C22.774 5.00836 23.9442 3.87187 26.0469 3.87187C27.5461 3.87187 28.4238 4.67409 28.7895 5.74373H31.1664C30.8007 3.67131 28.9723 2 26.0469 2C22.5363 2 20.4702 3.97215 20.4702 7.54875V8.45125C20.4702 12.0446 22.6095 14 26.0469 14C29.2831 14 31.2578 12.195 31.2578 8.66852V7.79944H25.864V9.50418Z" fill="#2E2E2E"/>
+            <path d="M38.2 14C41.5826 14 43.8681 11.9276 43.8681 8.43454V7.56546C43.8681 4.05571 41.6191 2 38.2 2C34.8175 2 32.532 4.08914 32.532 7.56546V8.43454C32.532 11.9443 34.7809 14 38.2 14ZM38.2 12.1281C36.2253 12.1281 34.8358 10.8579 34.8358 8.43454V7.56546C34.8358 5.10864 36.1888 3.87187 38.2 3.87187C40.1564 3.87187 41.5643 5.15877 41.5643 7.56546V8.43454C41.5643 10.8914 40.193 12.1281 38.2 12.1281Z" fill="#2E2E2E"/>
+            <path d="M43.8666 3.92201H47.7977V13.8496H49.9918V3.92201H53.9228V2.15042H43.8666V3.92201Z"/>
+            <path d="M55.2041 13.8496H57.3982V2.15042H55.2041V13.8496Z"/>
+            <path d="M59.6752 13.8496H61.8692V9.87187H64.0633C67.3362 9.87187 69 8.35097 69 6.01114C69 3.52089 67.5007 2.15042 64.0633 2.15042H59.6752V13.8496ZM64.0633 3.92201C65.8734 3.92201 66.6962 4.67409 66.6962 6.01114C66.6962 7.28134 65.8003 8.10028 64.0633 8.10028H61.8692V3.92201H64.0633Z" fill="#2E2E2E"/>
+          </svg>
+        </a>
+      </div>
+      <nav class="footer__navigate nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item footer__item accordion" data-menu-item>
+            <button class="nav__link nav__btn btn-reset accordion__control" aria-expanded="false">Управление недвижимостью</button>
+            <div class="dropdown accordion__content" aria-hidden="true">
+              <ul class="dropdown__list list-reset">
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Технический аудит недвижимости</a>
+                </li>
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Эксплуатация и техническое обслуживание недвижимости</a>
+                </li>
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Пожарная безопасность</a>
+                </li>
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Клининг</a>
+                </li>
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Управление арендными отношениями</a>
+                </li>
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Аварийно-диспетчерская служба</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav__item footer__item" data-menu-item>
+            <button class="nav__link nav__btn btn-reset">Продажа и аренда</button>
+          </li>
+          <li class="nav__item footer__item accordion" data-menu-item>
+            <button class="nav__link nav__btn btn-reset accordion__control" aria-expanded="false">Консалтинг</button>
+            <div class="dropdown accordion__content" aria-hidden="true">
+              <ul class="dropdown__list list-reset">
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Бухгалтерские и кадровые услуги</a>
+                </li>
+                <li class="dropdown__item" data-menu-item>
+                  <a href="#" class="dropdown__link">Юридическое сопровождение</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav__item" data-menu-item>
+            <a href="news.html" class="nav__link">Новости</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__contacts contacts">
+        <div class="footer__info">
+          <ul class="footer__list list-reset">
+            <li class="contacts__address">
+              <h5 class="contacts__title">приезжайте в наш офис</h5>
+              <p class="contacts__text">
+                Самарская область, Тольятти, ул. Пушкина, 10, офис 1408
+              </p>
+              <a href="#" class="contacts__link_under">смотреть на карте</a>
+            </li>
+            <li class="contacts__call-us">
+              <h5 class="contacts__title">звоните</h5>
+              <a href="tel:88000000000" class="contacts__link">8(800)000-00-00</a><br>
+            </li>
+            <li class="contacts__email email">
+              <h5 class="contacts__title">пишите</h5>
+              <a href="mailto:info@info.com" class="contacts__link">info@info.com</a>
+            </li>
+            <li class="contacts__social social">
+              <h5 class="contacts__title contacts__title_gap">следите за нами</h5>
+              <ul class="social__list list-reset">
+                <li class="social__item">
+                  <a href="telegram.com" class="social__link social__link_tg">
+                    <svg class="social__svg_tg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16.0003" cy="16.0003" r="13.3333"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32 16C32 24.8365 24.8365 32 16 32C7.16347 32 0 24.8365 0 16C0 7.16347 7.16347 0 16 0C24.8365 0 32 7.16347 32 16ZM10.7143 14.5343C9.11153 15.2341 7.46473 15.9532 5.95883 16.7827C5.17251 17.3584 6.21759 17.7657 7.19807 18.1477C7.35393 18.2084 7.50813 18.2685 7.65313 18.3285C7.7738 18.3656 7.89647 18.4047 8.0208 18.4443C9.11127 18.7917 10.3271 19.1791 11.3858 18.5963C13.1249 17.5973 14.766 16.4424 16.4059 15.2883C16.9432 14.9102 17.4803 14.5322 18.0207 14.1598C18.0461 14.1436 18.0746 14.1251 18.1059 14.1049C18.5662 13.8064 19.6016 13.1353 19.2186 14.0601C18.313 15.0505 17.3429 15.9271 16.3677 16.8087C15.7103 17.4027 15.0506 17.999 14.4066 18.6337C13.8457 19.0894 13.2633 20.0059 13.8913 20.6441C15.3379 21.6567 16.8071 22.6449 18.2755 23.6325C18.7533 23.9538 19.2311 24.2751 19.7079 24.5973C20.516 25.2425 21.779 24.7205 21.9567 23.7123C22.0357 23.2485 22.115 22.7848 22.1943 22.321C22.6327 19.7579 23.0713 17.1938 23.4587 14.6223C23.5113 14.2189 23.571 13.8156 23.6307 13.4121C23.7755 12.434 23.9204 11.4547 23.9657 10.4714C23.849 9.49007 22.6591 9.70587 21.997 9.92653C18.5935 11.2216 15.2241 12.6127 11.8679 14.0283C11.4877 14.1967 11.1023 14.3649 10.7143 14.5343Z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="vk.com" class="social__link social__link_vk">
+                    <svg class="social__svg_tg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16.0003" cy="16.0003" r="13.3333"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM16.8361 21.2508C16.8361 21.2508 17.1441 21.2172 17.3019 21.0509C17.4463 20.8985 17.4413 20.6109 17.4413 20.6109C17.4413 20.6109 17.4221 19.2679 18.0573 19.0696C18.6834 18.8746 19.4872 20.3683 20.3403 20.9427C20.9847 21.377 21.4739 21.2819 21.4739 21.2819L23.7535 21.2508C23.7535 21.2508 24.9455 21.1787 24.3804 20.2585C24.3337 20.1831 24.0507 19.5776 22.6859 18.3338C21.256 17.0319 21.448 17.2424 23.1692 14.99C24.2177 13.6184 24.6367 12.781 24.5056 12.4229C24.3813 12.0804 23.61 12.1714 23.61 12.1714L21.044 12.1869C21.044 12.1869 20.8537 12.1615 20.7126 12.2443C20.5749 12.3254 20.4856 12.5147 20.4856 12.5147C20.4856 12.5147 20.0799 13.5758 19.5382 14.4787C18.3954 16.3829 17.9388 16.4837 17.7518 16.3657C17.3169 16.0896 17.4254 15.2579 17.4254 14.6672C17.4254 12.8211 17.7109 12.0517 16.8704 11.8526C16.5916 11.7862 16.3862 11.7428 15.6725 11.7354C14.7568 11.7264 13.9822 11.7387 13.5431 11.9493C13.251 12.0894 13.0256 12.4024 13.1633 12.4204C13.3328 12.4426 13.7167 12.522 13.9204 12.7941C14.1834 13.1456 14.1742 13.9338 14.1742 13.9338C14.1742 13.9338 14.3253 16.1068 13.8211 16.3764C13.4755 16.5615 13.0014 16.1838 11.9822 14.4558C11.4605 13.5708 11.0665 12.5925 11.0665 12.5925C11.0665 12.5925 10.9905 12.4098 10.8544 12.3115C10.69 12.1927 10.4605 12.1558 10.4605 12.1558L8.0222 12.1714C8.0222 12.1714 7.65575 12.1812 7.52136 12.3377C7.402 12.4762 7.51218 12.7638 7.51218 12.7638C7.51218 12.7638 9.42121 17.1482 11.5832 19.358C13.5657 21.3835 15.8161 21.2508 15.8161 21.2508H16.8361Z"/>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            <div class="copyright">
+              <small class="copyright__years">© 2000 — 2022. Все права защищены</small>
+              <a href="#" class="copyright__link"><small>политика конфиденциальности</small></a>
+            </div>
+            <div class="site-cedro">
+              сайт сделан в <span class="site-cedro__name">Cedro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+<div class="overlay"></div>
+
+    </div>
+  </body>
+</html>
