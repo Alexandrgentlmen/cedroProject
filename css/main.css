@@ -2034,7 +2034,7 @@ a {
   top: 20px;
   width: 18px;
   height: 18px;
-  background-image: url("../../img/svg/plus-svg.svg");
+  background-image: url("./../img/svg/plus-svg.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2044,7 +2044,7 @@ a {
 }
 @media (max-width: 1024px) {
   .nav__btn.accordion__control::after {
-    background-image: url("../../img/svg/plus-footer-svg.svg");
+    background-image: url("./../img/svg/plus-footer-svg.svg");
   }
 }
 .nav__btn_active {
@@ -2059,7 +2059,7 @@ a {
   top: 20px;
   width: 18px;
   height: 18px;
-  background-image: url("../../img/svg/minus-svg.svg");
+  background-image: url("./../img/svg/minus-svg.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2074,7 +2074,7 @@ a {
 }
 @media (max-width: 1024px) {
   .nav__btn_active.accordion__control::before {
-    background-image: url("../../img/svg/minus-footer-svg.svg");
+    background-image: url("./../img/svg/minus-footer-svg.svg");
   }
 }
 .nav__btn_active.accordion__control::after {
@@ -2155,7 +2155,7 @@ a {
   top: 2px;
   width: 18px;
   height: 18px;
-  background-image: url("../../img/svg/plus-footer-svg.svg");
+  background-image: url("./../img/svg/plus-footer-svg.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2174,7 +2174,7 @@ a {
   top: 2px;
   width: 18px;
   height: 18px;
-  background-image: url("../../img/svg/minus-footer-svg.svg");
+  background-image: url("./../img/svg/minus-footer-svg.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

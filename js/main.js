@@ -604,7 +604,7 @@ const newsScrollBottomHeight = window.scrollY + getNewsCoord.top - headerHeight;
 window.addEventListener('scroll', () => {
   // положение скрола
   let scrollDistance = window.scrollY;
-  s;
+
   // if (scrollDistance >= newsScrollBottomHeight) {
   //   console.log(scrollDistance >= newsScrollBottomHeight)
   //   headerControls.classList.remove('header__fixed');
