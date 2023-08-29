@@ -2945,6 +2945,7 @@ a {
 .modal__logo-link {
   border-right: 1px solid var(--footer-border);
   padding: 24px 40px;
+  line-height: 16px;
 }
 .modal__logo-link:hover path {
   fill: var(--main-color);
@@ -2955,6 +2956,15 @@ a {
   .modal__logo-link {
     padding: 24px 20px;
   }
+}
+@media (max-width: 576px) {
+  .modal__logo-link {
+    padding: 16px 16px 12px;
+  }
+}
+.modal__logo {
+  padding: 0;
+  line-height: 16px;
 }
 .modal__logo-svg path {
   fill: var(--text-white);
@@ -2976,6 +2986,13 @@ a {
   height: 64px;
   background: var(--text-color);
   cursor: pointer;
+}
+@media (max-width: 576px) {
+  .modal__burger-btn {
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+  }
 }
 .modal__svg {
   position: absolute;
@@ -3089,9 +3106,9 @@ a {
 }
 @media (max-width: 576px) {
   .modal__call-form {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
     padding-top: 20px;
   }
 }
@@ -3108,11 +3125,22 @@ a {
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
+@media (max-width: 576px) {
+  .modal__form {
+    padding-bottom: 10px;
+  }
+}
 .modal__title {
   margin-top: 40px;
   margin-bottom: 16px;
   text-align: left;
   color: var(--text-white);
+}
+@media (max-width: 576px) {
+  .modal__title {
+    margin-bottom: 12px;
+    margin-top: 24px;
+  }
 }
 .modal__text {
   margin-bottom: auto;
@@ -3133,12 +3161,13 @@ a {
 }
 @media (max-width: 576px) {
   .modal__text {
+    font-size: 16px;
+    margin-top: 0;
     padding-right: 100px;
   }
 }
 @media (max-width: 375px) {
   .modal__text {
-    font-size: 16px;
     padding-right: 0;
   }
 }
@@ -3407,6 +3436,11 @@ a {
   -webkit-animation: 0.8s fadein ease-in-out;
   animation: 0.8s fadein ease-in-out;
 }
+@media (max-width: 576px) {
+  .form__label {
+    margin-bottom: 0;
+  }
+}
 .form__btn_text {
   display: block;
   width: 100%;
@@ -3434,7 +3468,7 @@ a {
 }
 .form .just-validate-error-label {
   position: absolute;
-  margin-top: 20px;
+  margin-top: 16px;
   font-family: "PTRoot", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -3444,6 +3478,11 @@ a {
   color: var(--error-tomato) !important;
   -webkit-animation: 0.8s fadein ease-in-out;
   animation: 0.8s fadein ease-in-out;
+}
+@media (max-width: 576px) {
+  .form .just-validate-error-label {
+    margin-top: -4px;
+  }
 }
 .form .just-validate-error-field {
   color: var(--error-tomato) !important;
