@@ -366,7 +366,7 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(".panel").forEach((panel, i
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header__text_under", {
   scrollTrigger: {
     trigger: ".header__text_under",
-    start: "50% center",
+    start: "40% center",
     toggleActions: "restart resume none reverse",
     scrub: true
   },
@@ -604,7 +604,16 @@ const newsScrollBottomHeight = window.scrollY + getNewsCoord.top - headerHeight;
 window.addEventListener('scroll', () => {
   // положение скрола
   let scrollDistance = window.scrollY;
-
+  if (scrollDistance >= adminHeight) {
+    headerControls.classList.add('header__fixed');
+    headerControls.classList.add('low-move');
+    headerBlock.style.marginTop = `${headerHeight}px`;
+  } else {
+    headerControls.classList.remove('header__fixed');
+    headerControls.classList.remove('low-move');
+    headerBlock.style.marginTop = null;
+  }
+  ;
   // if (scrollDistance >= newsScrollBottomHeight) {
   //   console.log(scrollDistance >= newsScrollBottomHeight)
   //   headerControls.classList.remove('header__fixed');
@@ -627,13 +636,18 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
-  header.style.zIndex = 10;
+  const headerControls = document.querySelector('.header__controls');
+  const headerHeight = headerControls.offsetHeight;
+  const news = document.querySelector('.news');
+  const getNewsCoord = news.getBoundingClientRect();
+  const newsScrollBottomHeight = window.scrollY + getNewsCoord.top - headerHeight;
+  header.style.zIndex = 2;
   console.log(header);
   window.addEventListener('scroll', e => {
-    if (window.scrollY > 4000) {
+    if (window.scrollY > newsScrollBottomHeight) {
       header.style.zIndex = 0;
     } else {
-      header.style.zIndex = 10;
+      header.style.zIndex = 2;
     }
   });
 });
