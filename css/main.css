@@ -602,6 +602,7 @@ a {
 }
 @media (max-width: 576px) {
   .admin__container::before {
+    left: -43px;
     top: 65px;
     width: 610px;
     height: 310px;
@@ -610,6 +611,7 @@ a {
 @media (max-width: 375px) {
   .admin__container::before {
     top: 55px;
+    left: 10px;
     width: 310px;
     height: 310px;
   }
@@ -3102,6 +3104,9 @@ a {
 @media (max-width: 1024px) {
   .modal__call-form {
     width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 }
 @media (max-width: 576px) {
