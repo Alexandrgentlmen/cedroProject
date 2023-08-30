@@ -2418,7 +2418,7 @@ a {
 }
 @media (max-width: 768px) {
   .expert__picture {
-    height: 100%;
+    height: auto;
   }
 }
 .expert__position {
