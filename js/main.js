@@ -23,6 +23,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_loader__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_loader__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_scroll_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scroll-header */ "./src/js/components/scroll-header.js");
 /* harmony import */ var _components_scroll_header__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_scroll_header__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_ticker_stop__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/ticker-stop */ "./src/js/components/ticker-stop.js");
+/* harmony import */ var _components_ticker_stop__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_ticker_stop__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -366,7 +369,7 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(".panel").forEach((panel, i
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header__text_under", {
   scrollTrigger: {
     trigger: ".header__text_under",
-    start: "40% center",
+    start: "200% center",
     toggleActions: "restart resume none reverse",
     scrub: true
   },
@@ -375,8 +378,8 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header__text_under", {
 });
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header__title", {
   scrollTrigger: {
-    trigger: ".header__text_under",
-    start: "200% center",
+    trigger: ".header__title",
+    start: "160% center",
     toggleActions: "restart resume none reverse",
     scrub: true
   },
@@ -628,6 +631,30 @@ window.addEventListener('scroll', () => {
 
 /***/ }),
 
+/***/ "./src/js/components/ticker-stop.js":
+/*!******************************************!*\
+  !*** ./src/js/components/ticker-stop.js ***!
+  \******************************************/
+/***/ (() => {
+
+const ticker = document.querySelector('.ticker');
+const tickerStrings = document.querySelectorAll('.ticker__string');
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 1.0
+};
+const callback = function (entries, observer) {
+  tickerStrings.forEach(elString => {
+    elString.style.animationName = 'ticker';
+  });
+};
+const observer = new IntersectionObserver(callback, options);
+const target = document.querySelector('.ticker');
+observer.observe(target);
+
+/***/ }),
+
 /***/ "./src/js/components/zIndexBug.js":
 /*!****************************************!*\
   !*** ./src/js/components/zIndexBug.js ***!
@@ -642,7 +669,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const getNewsCoord = news.getBoundingClientRect();
   const newsScrollBottomHeight = window.scrollY + getNewsCoord.top - headerHeight;
   header.style.zIndex = 2;
-  console.log(header);
   window.addEventListener('scroll', e => {
     if (window.scrollY > newsScrollBottomHeight) {
       header.style.zIndex = 0;
@@ -688,9 +714,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
+  const headerWrapper = document?.querySelector('[data-menu-wrapper]');
+  const textBurger = Array.from(document?.querySelectorAll('[data-text-toggle]'));
   burger?.addEventListener('click', e => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+    headerWrapper?.classList.toggle('wrapper--active');
+    textBurger?.forEach(el => {
+      el.classList.toggle('text--active');
+    });
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');

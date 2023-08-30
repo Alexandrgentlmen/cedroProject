@@ -13,7 +13,7 @@
   <script defer src="js/main.js"></script>
 </head>
 
-  <body class="page__body">
+  <body class="page__body" id="scrollArea">
     <div class="site-container">
       <header class="header">
   <section class="modal modal__container">
@@ -125,7 +125,7 @@
           </svg>
         </a>
       </div>
-      <div class="header__wrapper">
+      <div class="header__wrapper" data-menu-wrapper>
         <nav class="header__nav nav" data-menu>
           <ul class="nav__list list-reset accordion__list">
             <li class="nav__item accordion">
@@ -182,15 +182,16 @@
         <button class="burger" data-burger aria-expanded="false" aria-label="Открыть меню" >
           <span class="burger__line"></span>
         </button>
-        <span class="header__burger-text">Меню</span>
+        <span class="header__burger-text header__burger-open" data-text-toggle>Меню</span>
+        <span class="header__burger-text header__burger-close" data-text-toggle>Закрыть</span>
       </div>
     </div>
-    <div class="header__text">
-      <h1 class="header__title">Управляющая компания и брокер с базой недвижимости<br/> в 7 городах России</h1>
-      <p class="header__text_under">Снимаем с владельцев зданий все задачи по администрированию и подбираем недвижимость для инвестиций, покупки и аренды. </p>
-    </div>
 </header>
-<img class="header__img rellax" src="./img/city-view.jpg" alt="город" data-rellax-speed="-8">
+<img class="header__img rellax" src="./img/city-view-min.jpg" alt="город" data-rellax-speed="-8">
+<div class="header-text">
+  <h1 class="header-text__title">Управляющая компания и брокер с базой недвижимости<br/> в 7 городах России</h1>
+  <p class="header-text__under">Снимаем с владельцев зданий все задачи по администрированию и подбираем недвижимость для инвестиций, покупки и аренды. </p>
+</div>
 
       <main class="main">
         <section class="admin">
