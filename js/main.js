@@ -23,8 +23,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_loader__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_loader__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_scroll_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scroll-header */ "./src/js/components/scroll-header.js");
 /* harmony import */ var _components_scroll_header__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_scroll_header__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_ticker_stop__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/ticker-stop */ "./src/js/components/ticker-stop.js");
-/* harmony import */ var _components_ticker_stop__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_ticker_stop__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -35,6 +33,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import './components/ticker-stop';
 
 /***/ }),
 
@@ -48,7 +47,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
-/* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_functions_burger__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 /* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
 /* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_3__);
@@ -366,25 +364,25 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(".panel").forEach((panel, i
 
 // исчезновение хэдер маленького текста
 
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header__text_under", {
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header-text__under", {
   scrollTrigger: {
-    trigger: ".header__text_under",
-    start: "200% center",
+    trigger: ".header-text__under",
+    start: "40% center",
     toggleActions: "restart resume none reverse",
     scrub: true
   },
   opacity: 0,
-  duration: 2
+  duration: 1
 });
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header__title", {
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(".header-text__title", {
   scrollTrigger: {
-    trigger: ".header__title",
-    start: "160% center",
+    trigger: ".header-text__title",
+    start: "130% center",
     toggleActions: "restart resume none reverse",
     scrub: true
   },
   opacity: 0,
-  duration: 3
+  duration: 4
 });
 
 /***/ }),
@@ -474,9 +472,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function () {
+  const burger = document?.querySelector('[data-burger]');
+  const menu = document?.querySelector('[data-menu]');
+  const headerWrapper = document?.querySelector('[data-menu-wrapper]');
   const closeModalBtn = document.querySelector('.modal__burger-btn');
   const closeModalDoneBtn = document.querySelector('.modal-done__burger-btn');
   const toMainBtn = document.querySelector('.modal-done__btn');
+  const overlay = document.querySelector('.overlay');
   const modalDone = document.querySelector('.modal-done');
   const modal = document.querySelector('.modal');
   const callBtn = document.querySelector('.header__btn-call');
@@ -484,13 +486,27 @@ __webpack_require__.r(__webpack_exports__);
   callBtn.addEventListener('click', () => {
     if (!modal.classList.contains('modal_active')) {
       modal.classList.add('modal_active');
+      overlay.classList.add('overlay_visible');
       (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
     }
   });
   callBtnNav.addEventListener('click', () => {
     if (!modal.classList.contains('modal_active')) {
+      burger?.classList.remove('burger--active');
+      menu?.classList.remove('menu--active');
+      headerWrapper?.classList.toggle('wrapper--active');
       modal.classList.add('modal_active');
+      overlay.classList.add('overlay_visible');
       (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
+      if (menu?.classList.contains('menu--active')) {
+        burger?.setAttribute('aria-expanded', 'true');
+        burger?.setAttribute('aria-label', 'Закрыть меню');
+        (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
+      } else {
+        burger?.setAttribute('aria-expanded', 'false');
+        burger?.setAttribute('aria-label', 'Открыть меню');
+        (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
+      }
     }
   });
   closeModalBtn.addEventListener('click', e => {
@@ -499,6 +515,7 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(() => {
         if (modal.classList.contains('modal_active')) {
           modal.classList.remove('modal_active');
+          overlay.classList.remove('overlay_visible');
           (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
         }
       }, 500);
@@ -510,6 +527,7 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(() => {
         if (modalDone.classList.contains('modal-done_active')) {
           modalDone.classList.remove('modal-done_active');
+          overlay.classList.remove('overlay_visible');
           (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
         }
       }, 500);
@@ -521,6 +539,7 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(() => {
         if (modalDone.classList.contains('modal-done_active')) {
           modalDone.classList.remove('modal-done_active');
+          overlay.classList.remove('overlay_visible');
           (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
         }
       }, 500);
@@ -591,6 +610,8 @@ ticker.addEventListener('mouseenter', e => {
 const footer = document.querySelector('.footer');
 const headerBlock = document.querySelector('.header');
 const headerControls = document.querySelector('.header__controls');
+const headerText = document.querySelector('.header-text');
+const arrTickerString = document.querySelectorAll('.ticker__string');
 const admin = document.querySelector('.admin');
 const news = document.querySelector('.news');
 const footerNav = document.querySelector('.footer__nav');
@@ -608,10 +629,18 @@ window.addEventListener('scroll', () => {
   // положение скрола
   let scrollDistance = window.scrollY;
   if (scrollDistance >= adminHeight) {
-    headerControls.classList.add('header__fixed');
+    headerText.classList.add('visually-hidden');
+    arrTickerString.forEach(str => {
+      str.classList.add('ticker__animate');
+    });
     headerControls.classList.add('low-move');
+    headerControls.classList.add('header__fixed');
     headerBlock.style.marginTop = `${headerHeight}px`;
   } else {
+    headerText.classList.remove('visually-hidden');
+    arrTickerString.forEach(str => {
+      str.classList.remove('ticker__animate');
+    });
     headerControls.classList.remove('header__fixed');
     headerControls.classList.remove('low-move');
     headerBlock.style.marginTop = null;
@@ -628,30 +657,6 @@ window.addEventListener('scroll', () => {
   //   headerBlock.style.marginTop = null;
   // };
 });
-
-/***/ }),
-
-/***/ "./src/js/components/ticker-stop.js":
-/*!******************************************!*\
-  !*** ./src/js/components/ticker-stop.js ***!
-  \******************************************/
-/***/ (() => {
-
-const ticker = document.querySelector('.ticker');
-const tickerStrings = document.querySelectorAll('.ticker__string');
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 1.0
-};
-const callback = function (entries, observer) {
-  tickerStrings.forEach(elString => {
-    elString.style.animationName = 'ticker';
-  });
-};
-const observer = new IntersectionObserver(callback, options);
-const target = document.querySelector('.ticker');
-observer.observe(target);
 
 /***/ }),
 
@@ -677,26 +682,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-// document.addEventListener('DOMContentLoaded', () => {
-//   const header = document.querySelector('.header');
-//   const news = document.querySelector('.news');
-//   const footerNav = document.querySelector('.footer__nav');
-
-//   const newsHeight = news.offsetHeight;
-//   const getNewsCoord = news.getBoundingClientRect();
-//   const newsScrollBottomHeight = window.pageY + getNewsCoord.top + getNewsCoord.height;
-
-//   header.style.zIndex = 14;
-//   window.addEventListener('scroll', (e) => {
-
-//     if (window.scrollY > (newsScrollBottomHeight)) {
-
-//       header.style.zIndex = 1;
-//     } else {
-//       header.style.zIndex = 14;
-//     }
-//   });
-// });
 
 /***/ }),
 
@@ -704,10 +689,13 @@ document.addEventListener('DOMContentLoaded', () => {
 /*!************************************!*\
   !*** ./src/js/functions/burger.js ***!
   \************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// import { disableScroll } from '../functions/disable-scroll';
-// import { enableScroll } from '../functions/enable-scroll';
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/disable-scroll */ "./src/js/functions/disable-scroll.js");
+/* harmony import */ var _functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/enable-scroll */ "./src/js/functions/enable-scroll.js");
+
 
 (function () {
   const burger = document?.querySelector('[data-burger]');
@@ -719,6 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burger?.addEventListener('click', e => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+    overlay.classList.toggle('overlay_visible');
     headerWrapper?.classList.toggle('wrapper--active');
     textBurger?.forEach(el => {
       el.classList.toggle('text--active');
@@ -726,29 +715,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');
-      // disableScroll();
+      (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
     } else {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
-      // enableScroll();
+      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     }
   });
-
   overlay?.addEventListener('click', () => {
     burger?.setAttribute('aria-expanded', 'false');
     burger?.setAttribute('aria-label', 'Открыть меню');
+    overlay.classList.remove('overlay_visible');
     burger.classList.remove('burger--active');
     menu.classList.remove('menu--active');
-    // enableScroll();
+    (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
   });
-
   menuItems?.forEach(el => {
     el.addEventListener('click', () => {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
-      // enableScroll();
+      (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     });
   });
 })();
